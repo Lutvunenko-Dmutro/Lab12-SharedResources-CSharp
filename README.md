@@ -34,3 +34,17 @@
 1. Клонуйте репозиторій:
    ```bash
    git clone https://github.com/Lutvunenko-Dmutro/Lab12-SharedResources-CSharp.git
+
+
+2.  Перейдіть у папку проєкту:
+    ```bash
+    cd Lab12-SharedResources-CSharp
+    ```
+3.  Запустіть проєкт:
+    ```bash
+    dotnet run
+    ```
+
+-----
+
+© 2025 Литвиненко Дмитро
