@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "JGFMtSCqPLU=",
+  "success": true,
+  "projectFilePath": "D:\\yhoba\\1\\Test\\123\\Lab12-SharedResources-CSharp\\SharedResourcesShowcase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dmutr\\.nuget\\packages\\spectre.console\\0.57.2\\spectre.console.0.57.2.nupkg.sha512",
+    "C:\\Users\\dmutr\\.nuget\\packages\\spectre.console.ansi\\0.57.2\\spectre.console.ansi.0.57.2.nupkg.sha512",
+    "C:\\Users\\dmutr\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.29\\microsoft.netcore.app.ref.8.0.29.nupkg.sha512",
+    "C:\\Users\\dmutr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.29\\microsoft.windowsdesktop.app.ref.8.0.29.nupkg.sha512",
+    "C:\\Users\\dmutr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.29\\microsoft.aspnetcore.app.ref.8.0.29.nupkg.sha512",
+    "C:\\Users\\dmutr\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.29\\microsoft.netcore.app.host.win-x64.8.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

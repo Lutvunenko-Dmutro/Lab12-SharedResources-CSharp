@@ -1,8 +1,9 @@
 using System;
 using System.Text;
 using System.Threading.Tasks;
+using Spectre.Console;
 
-namespace Lab12
+namespace SharedResourcesShowcase
 {
     class Program
     {
@@ -14,7 +15,7 @@ namespace Lab12
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Console.Title = "Лабораторна робота №12 | Литвиненко Дмитро | Варіант 8 (Модернізована)";
+            Console.Title = "Shared Resources Showcase | .NET Concurrency";
 
             // Генерація масиву
             Random rnd = Random.Shared; // Оновлено на сучасний і потокобезпечний Random.Shared
@@ -46,7 +47,7 @@ namespace Lab12
             {
                 if (numbers[i] > 10 && numbers[i] < 20)
                 {
-                    PrintColored($"[T0: {numbers[i]}] ", ConsoleColor.Cyan);
+                    PrintColored($"[[T0: {numbers[i]}]] ", ConsoleColor.Cyan);
                     await Task.Delay(150); // Неблокуюча затримка для візуалізації
                 }
             }
@@ -58,7 +59,7 @@ namespace Lab12
             for (int i = 0; i < numbers.Length; i++)
             {
                 int square = numbers[i] * numbers[i];
-                PrintColored($"[T1: {square}] ", ConsoleColor.Yellow);
+                PrintColored($"[[T1: {square}]] ", ConsoleColor.Yellow);
                 await Task.Delay(150); // Неблокуюча затримка
             }
         }
@@ -68,26 +69,28 @@ namespace Lab12
         {
             lock (consoleLock)
             {
-                Console.ForegroundColor = color;
-                Console.Write(message);
-                Console.ResetColor();
+                // Перетворюємо ConsoleColor в колір Spectre.Console
+                string colorName = color.ToString().ToLower();
+                AnsiConsole.Markup($"[{colorName}]{message}[/]");
             }
         }
 
         static void PrintHeader()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("=============================================");
-            Console.WriteLine("    ЛАБОРАТОРНА РОБОТА №12");
-            Console.WriteLine("    Спільний доступ до даних (Task, async/await)");
-            Console.WriteLine("=============================================");
-            Console.ResetColor();
+            AnsiConsole.Write(
+                new FigletText("Shared Resources")
+                    .LeftJustified()
+                    .Color(Color.Green));
+
+            AnsiConsole.MarkupLine("[bold green]=============================================[/]");
+            AnsiConsole.MarkupLine("[bold green]    Спільний доступ до даних (Task, async/await)[/]");
+            AnsiConsole.MarkupLine("[bold green]=============================================[/]\n");
         }
 
         static void PrintFooter()
         {
-            Console.WriteLine("\n\n=============================================");
-            Console.WriteLine("Робота завершена. Натисніть Enter...");
+            AnsiConsole.MarkupLine("\n\n[bold green]=============================================[/]");
+            AnsiConsole.MarkupLine("[bold green]Робота завершена. Натисніть Enter...[/]");
             Console.ReadLine(); // Змінив з ReadKey на ReadLine, щоб коректно працювало в терміналах
         }
     }
