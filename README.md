@@ -31,12 +31,12 @@
 
 1. Клонуйте репозиторій:
    ```bash
-   git clone https://github.com/Lutvunenko-Dmutro/Lab12-SharedResources-CSharp.git
+   git clone https://github.com/Lutvunenko-Dmutro/SharedResourcesShowcase.git
    ```
 
 2. Перейдіть у папку проєкту:
    ```bash
-   cd Lab12-SharedResources-CSharp
+   cd SharedResourcesShowcase
    ```
 
 3. Запустіть проєкт:
