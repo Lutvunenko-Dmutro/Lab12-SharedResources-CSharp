@@ -45,7 +45,8 @@
    ```
 
 ## 🔗 Пов'язані проєкти
-- [Async-Showcase](https://github.com/Lutvunenko-Dmutro/Async-Showcase) — Попередній проєкт: основи паралельного виконання незалежних задач (TPL) та бенчмаркінг продуктивності.
+- [Async-Showcase](https://github.com/Lutvunenko-Dmutro/Async-Showcase) — основи паралельного виконання незалежних задач (TPL) та бенчмаркінг продуктивності.
+- [ThreadPrioritiesShowcase](https://github.com/Lutvunenko-Dmutro/ThreadPrioritiesShowcase) — дослідження впливу пріоритетів потоків на розподіл процесорного часу.
 
 -----
 
