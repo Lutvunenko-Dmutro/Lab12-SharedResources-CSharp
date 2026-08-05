@@ -44,6 +44,9 @@
    dotnet run
    ```
 
+## 🔗 Пов'язані проєкти
+- [Async-Showcase](https://github.com/Lutvunenko-Dmutro/Async-Showcase) — Попередній проєкт: основи паралельного виконання незалежних задач (TPL) та бенчмаркінг продуктивності.
+
 -----
 
 © 2026 Dmytro Lytvynenko
